@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
     <title>Product Details</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <h1>Welcome</h1>
+        <h1>Product Details Page</h1>
     </header>
+    <!-- Header ends here-->
 
-    <footer>
-        <p>&copy; 2024 My Product Details Page</p>
-    </footer>
+
+    <!-- Body of the project  -->
+    <div class="main-div">
+        <div  id="first-main-image">
+            <img id="main-image" src="" alt="first-main-image">
+        </div>
+        <div id="thumbnail-images"></div>
+
+        <button id="prev" class="arrow-btn pointer" onclick="onClickPrev()">&#8249;&#8249;</button>
+        <button id="next" class="arrow-btn pointer" onclick="onClickNext()">&#8250;&#8250;</button>
+    </div>
+    <!-- Body of the project ends here -->
+
     <script src="details.js"></script>
 </body>
 

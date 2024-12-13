@@ -3,11 +3,133 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: lightblue;
 }
 
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+    text-align: center;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+.main-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2%;
+}
+
+#first-main-image {
+    margin: 0.5rem;
+}
+
+#first-main-image img {
+    width: 90%;
+    max-width: 500px;
+    max-height: 450px;
+    height: auto;
+    border-radius: 8px;
+}
+#thumbnail-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#thumbnail-images .thumbnail img {
+    width: 8rem;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.arrow-btn {
+    position: absolute;
+    background: beige;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#prev {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 993px) {
+    .main-div {
+        height: 80%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #first-main-image img {
+        width: 80%;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    #thumbnail-images .thumbnail img {
+        width: 6rem;
+        max-width: 80px;
+    }
+
+    #prev {
+        left: 2%;
+        top: 30%;
+    }
+
+    #next {
+        right: 2%;
+        top: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-div {
+        height: 80%;
+    }
+    #first-main-image img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #thumbnail-images {
+        gap: 0.3rem;
+    }
+
+    #thumbnail-images .thumbnail img {
+        width: 4rem;
+        max-width: 60px;
+    }
+
+    #prev, #next {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+
+#prev {
+    top: 50%;
+}
+
+#next {
+    top: 50%;
+}
 }
