@@ -103,7 +103,7 @@ document.getElementById("cart-btn").addEventListener("click", function () {
 
     setTimeout(() => {
       confirmationMessage.classList.add("hidden");
-    }, 3000);
+    }, 5000);
   }
 });
 
