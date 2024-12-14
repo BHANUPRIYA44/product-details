@@ -73,4 +73,25 @@ function loadCarousel(main, thumbnailImagesList) {
   });
 }
 
+function handleTouchStart(event) {
+  startX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  endX = event.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+  if (startX > endX + 50) {
+    onClickNext();
+  } else if (startX < endX - 50) {
+    onClickPrev();
+  }
+}
+
+const mainImageContainer = document.getElementById("first-main-image");
+mainImageContainer.addEventListener("touchstart", handleTouchStart);
+mainImageContainer.addEventListener("touchmove", handleTouchMove);
+mainImageContainer.addEventListener("touchend", handleTouchEnd);
+
 fetchUnsplashApiPhotos();

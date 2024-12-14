@@ -22,6 +22,11 @@ header {
 
 #first-main-image {
     margin: 0.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 30rem;
+    min-height: 30rem;
 }
 
 #first-main-image img {
