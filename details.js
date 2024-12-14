@@ -89,6 +89,24 @@ function handleTouchEnd() {
   }
 }
 
+document.getElementById("cart-btn").addEventListener("click", function () {
+  const quantity = document.getElementById("quantity").value;
+  const flavor = document.getElementById("ice-cream").value;
+
+  if (quantity && flavor) {
+    const message = `Successfully added ${quantity} ${flavor} Ice Cream${
+      quantity > 1 ? "s" : ""
+    } to your cart!`;
+    const confirmationMessage = document.getElementById("confirmation-message");
+    confirmationMessage.textContent = message;
+    confirmationMessage.classList.remove("hidden");
+
+    setTimeout(() => {
+      confirmationMessage.classList.add("hidden");
+    }, 3000);
+  }
+});
+
 const mainImageContainer = document.getElementById("first-main-image");
 mainImageContainer.addEventListener("touchstart", handleTouchStart);
 mainImageContainer.addEventListener("touchmove", handleTouchMove);

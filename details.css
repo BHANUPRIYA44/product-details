@@ -2,14 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: lightblue;
 }
 
 header {
     text-align: center;
     background-color: lightblue;
-    padding: 1rem;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+.header-main{
+    margin: 1% 0;
+}
+
+.product-info {
+    margin-bottom: 2%;
 }
 
 .main-div {
@@ -17,7 +25,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 2%;
+    margin: 0% 2% 5% 2%;
+    text-align: center;
 }
 
 #first-main-image {
@@ -77,12 +86,77 @@ header {
     cursor: pointer;
 }
 
+.product-info-section {
+    border: 2px solid black;
+    margin: 3%;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info-title {
+    text-align: center;
+}
+
+.product-description {
+    margin-top: 0;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.variant-dropdown {
+    margin: 2% 0;
+}
+
+.quantity-selector {
+    margin: 2% 0;
+}
+
+.ice-cream-title {
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-btn {
+    background-color: #3F51B5;
+    border: none;
+    color: white;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.product-price {
+    margin-right: 8%;
+}
+
+#confirmation-message {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
 /* Responsive Design */
 @media only screen and (min-width: 993px) {
     .main-div {
         height: 80%;
     }
 }
+
 @media only screen and (max-width: 992px) {
     #first-main-image img {
         width: 80%;
@@ -104,12 +178,23 @@ header {
         right: 2%;
         top: 30%;
     }
+
+    .product-info-section {
+        padding: 0 2%;
+    }
+    .product-price {
+        margin-right: 0%;
+    }
+    .ice-cream-title {
+        margin-right: 1%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .main-div {
         height: 80%;
     }
+
     #first-main-image img {
         width: 90%;
         max-width: 300px;
@@ -124,17 +209,18 @@ header {
         max-width: 60px;
     }
 
-    #prev, #next {
+    #prev,
+    #next {
         font-size: 0.8rem;
         padding: 0.3rem;
     }
 
 
-#prev {
-    top: 50%;
-}
+    #prev {
+        top: 50%;
+    }
 
-#next {
-    top: 50%;
-}
+    #next {
+        top: 50%;
+    }
 }

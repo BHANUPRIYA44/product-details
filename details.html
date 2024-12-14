@@ -11,14 +11,14 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Product Details Page</h1>
+        <h1 class="header-main">Product Details Page</h1>
     </header>
     <!-- Header ends here-->
 
-
     <!-- Body of the project  -->
+    <!-- main - carousel section -->
     <div class="main-div">
-        <div  id="first-main-image">
+        <div id="first-main-image">
             <img id="main-image" src="" alt="first-main-image">
         </div>
         <div id="thumbnail-images"></div>
@@ -26,6 +26,38 @@
         <button id="prev" class="arrow-btn pointer" onclick="onClickPrev()">&#8249;&#8249;</button>
         <button id="next" class="arrow-btn pointer" onclick="onClickNext()">&#8250;&#8250;</button>
     </div>
+    <!-- main carousel section --- ends here-->
+
+    <!-- product information section -->
+    <div class="product-info-section">
+        <h1 class="product-info-title">Product Information section</h1>
+        <div class="product-info">
+            <div class="product-header">
+                <div class="ice-cream-title">
+                    <h2 class="product-name margin-bottom-0">Delicious Ice Cream</h2>
+                    <p class="product-description">Choose your favorite flavor and enjoy a refreshing treat!</p>
+                </div>
+                <p class="product-price margin-bottom-0">Price: 200&#8377;</p>
+            </div>
+            <div class="variant-dropdown">
+                <label for="ice-creams">Choose a flavour:</label>
+
+                <select name="ice-creams" id="ice-cream">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="mint">Mint</option>
+                </select>
+            </div>
+            <div class="quantity-selector">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <button id="cart-btn">Add to Cart</button>
+            <p id="confirmation-message" class="hidden"></p>
+        </div>
+    </div>
+    <!-- product information section ends here-->
     <!-- Body of the project ends here -->
 
     <script src="details.js"></script>
