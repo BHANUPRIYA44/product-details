@@ -10,7 +10,6 @@ async function fetchUnsplashApiPhotos() {
       `https://api.unsplash.com/photos/random?count=5&client_id=${ACCESS_KEY}`
     );
     const unsplashPhotosList = await res.json();
-    console.log(unsplashPhotosList);
     unsplashImages = unsplashPhotosList.map((photo) => photo.urls.regular);
     firstImage = unsplashPhotosList && unsplashPhotosList[0].urls.regular;
     fetchLoremPicsumApiPhotos();
@@ -24,10 +23,9 @@ async function fetchLoremPicsumApiPhotos() {
     const res = await fetch("https://picsum.photos/v2/list?page=1&limit=5");
     const loremPhotosList = await res.json();
     thumbnailsArray = loremPhotosList.map((photo) => photo.download_url);
-    console.log(loremPhotosList);
     loadCarousel(firstImage, thumbnailsArray);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
